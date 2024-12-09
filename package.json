@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3000",
+    "deploy":"npm run build && rsync --exclude=.git -azP . ubuntu@52.77.26.151:/home/ubuntu/apps/next-fc",
+    "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
